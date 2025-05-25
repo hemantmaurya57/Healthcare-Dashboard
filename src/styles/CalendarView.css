@@ -1,0 +1,145 @@
+.calendar-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.week-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.month-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.month-navigation h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.month-navigation svg {
+  cursor: pointer;
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.month-navigation svg:hover {
+  color: #1e293b;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-day {
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  min-height: 120px;
+}
+
+.day-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.day-name {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.day-number {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.day-appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.appointment-time {
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.6rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.appointment-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.appointment-card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.appointment-card .card-content h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.appointment-card .card-content p {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+}
+
+.appointment-card .card-content span {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .calendar-day {
+    min-height: 80px;
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .appointment-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .appointment-time {
+    font-size: 0.5rem;
+    padding: 0.125rem 0.25rem;
+  }
+}

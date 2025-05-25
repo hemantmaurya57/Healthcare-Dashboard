@@ -1,0 +1,82 @@
+.activity-feed {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.activity-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.activity-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.activity-chart {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  height: 120px;
+  gap: 0.5rem;
+}
+
+.chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.bar {
+  width: 100%;
+  max-width: 24px;
+  background: linear-gradient(180deg, #06b6d4 0%, #0891b2 100%);
+  border-radius: 2px 2px 0 0;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  animation: barGrow 0.6s ease-out;
+}
+
+.bar:hover {
+  background: linear-gradient(180deg, #0891b2 0%, #0e7490 100%);
+}
+
+.bar-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@keyframes barGrow {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--height);
+  }
+}
+
+@media (max-width: 768px) {
+  .activity-feed {
+    padding: 1rem;
+  }
+  
+  .activity-chart {
+    height: 80px;
+  }
+  
+  .bar {
+    max-width: 20px;
+  }
+  
+  .bar-label {
+    font-size: 0.6rem;
+  }
+}
