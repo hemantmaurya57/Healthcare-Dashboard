@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Grid, Clock, Calendar, Users, BarChart, 
   FileText, MessageCircle, Phone, Settings 
@@ -27,14 +28,14 @@ const Sidebar = () => {
           {navigationLinks.map((link, index) => {
             const IconComponent = iconMap[link.icon];
             return (
-              <a 
+              <Link 
                 key={index}
-                href="#" 
+                to={`/${link.name.toLowerCase()}`} 
                 className={`nav-link ${link.active ? 'active' : ''}`}
               >
                 <IconComponent size={20} />
                 <span>{link.name}</span>
-              </a>
+              </Link>
             );
           })}
         </nav>
